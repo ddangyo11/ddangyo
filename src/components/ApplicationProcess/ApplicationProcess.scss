@@ -1,0 +1,138 @@
+.application-process {
+  padding: 80px 20px;
+  background-color: #f8f8f8;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #333;
+  }
+
+  &__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__item {
+    background-color: #fff;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &__step-label {
+    display: inline-block;
+    background-color: #ff6b35;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  &__icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__step-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+    line-height: 1.4;
+  }
+
+  &__step-description {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+  }
+}
+
+// PC 스타일 (1024px 이상)
+@media (min-width: 1024px) {
+  .application-process {
+    &__container {
+      max-width: 1200px;
+    }
+
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+  }
+}
+
+// 태블릿 (768px ~ 1023px)
+@media (min-width: 768px) and (max-width: 1023px) {
+  .application-process {
+    &__container {
+      max-width: 100%;
+    }
+
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+  }
+}
+
+// 모바일 (768px 이하)
+@media (max-width: 768px) {
+  .application-process {
+    padding: 60px 15px;
+
+    &__container {
+      max-width: 100%;
+    }
+
+    &__title {
+      font-size: 1.8rem;
+      margin-bottom: 40px;
+    }
+
+    &__grid {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &__item {
+      padding: 30px 15px;
+      width: 100%;
+    }
+
+    &__step-title {
+      font-size: 1.1rem;
+    }
+  }
+}
+

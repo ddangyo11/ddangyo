@@ -1,0 +1,99 @@
+.footer {
+  background-color: #2c2c2c;
+  color: #fff;
+  padding: 60px 20px 30px;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  &__logo {
+    &-img {
+      width: 150px;
+      height: auto;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__text {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+
+    &--phone {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ff6b35;
+      margin-top: 10px;
+    }
+  }
+
+  &__copyright {
+    padding-top: 30px;
+    border-top: 1px solid #444;
+    text-align: center;
+
+    p {
+      font-size: 0.9rem;
+      color: #999;
+    }
+  }
+}
+
+// PC 스타일 (1024px 이상)
+@media (min-width: 1024px) {
+  .footer {
+    &__container {
+      max-width: 1200px;
+    }
+  }
+}
+
+// 태블릿 (768px ~ 1023px)
+@media (min-width: 768px) and (max-width: 1023px) {
+  .footer {
+    &__container {
+      max-width: 100%;
+    }
+  }
+}
+
+// 모바일 (768px 이하)
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 15px 20px;
+
+    &__container {
+      max-width: 100%;
+    }
+
+    &__content {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    &__text {
+      font-size: 0.9rem;
+
+      &--phone {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,138 @@
+.benefits {
+  padding: 80px 20px;
+  background-color: #f5f0e8;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #ff6b35;
+  }
+
+  &__section {
+    margin-bottom: 60px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+  }
+
+  &__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &__icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__text {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+}
+
+// PC 스타일 (1024px 이상)
+@media (min-width: 1024px) {
+  .benefits {
+    &__container {
+      max-width: 1200px;
+    }
+
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+  }
+}
+
+// 태블릿 (768px ~ 1023px)
+@media (min-width: 768px) and (max-width: 1023px) {
+  .benefits {
+    &__container {
+      max-width: 100%;
+    }
+
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  }
+}
+
+// 모바일 (768px 이하)
+@media (max-width: 768px) {
+  .benefits {
+    padding: 60px 15px;
+
+    &__container {
+      max-width: 100%;
+    }
+
+    &__title {
+      font-size: 1.8rem;
+      margin-bottom: 40px;
+    }
+
+    &__grid {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    &__item {
+      padding: 20px 15px;
+      width: 100%;
+    }
+
+    &__text {
+      font-size: 0.9rem;
+    }
+  }
+}
+

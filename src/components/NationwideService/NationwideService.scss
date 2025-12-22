@@ -1,0 +1,74 @@
+.nationwide-service {
+  padding: 80px 20px;
+  background-color: #fff;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  &__subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 50px;
+    line-height: 1.6;
+  }
+
+  &__map {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    &-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+}
+
+// PC 스타일 (1024px 이상)
+@media (min-width: 1024px) {
+  .nationwide-service {
+    &__container {
+      max-width: 1200px;
+    }
+  }
+}
+
+// 태블릿 (768px ~ 1023px)
+@media (min-width: 768px) and (max-width: 1023px) {
+  .nationwide-service {
+    &__container {
+      max-width: 100%;
+    }
+  }
+}
+
+// 모바일 (768px 이하)
+@media (max-width: 768px) {
+  .nationwide-service {
+    padding: 60px 15px;
+
+    &__container {
+      max-width: 100%;
+    }
+
+    &__title {
+      font-size: 1.8rem;
+    }
+
+    &__subtitle {
+      font-size: 1rem;
+    }
+  }
+}

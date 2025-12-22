@@ -1,0 +1,111 @@
+.free-service {
+  padding: 60px 20px;
+  background-color: #fff;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__banner {
+    width: 100%;
+    background-color: #666;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    border-radius: 5px;
+  }
+
+  &__banner-text {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  &__content {
+    text-align: center;
+  }
+
+  &__description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+
+  &__phone {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #0066cc;
+    margin-bottom: 30px;
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    background-color: #ff6b35;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #e55a2b;
+    }
+  }
+
+  &__button-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+}
+
+// PC 스타일 (1024px 이상)
+@media (min-width: 1024px) {
+  .free-service {
+    &__container {
+      max-width: 1200px;
+    }
+  }
+}
+
+// 태블릿 (768px ~ 1023px)
+@media (min-width: 768px) and (max-width: 1023px) {
+  .free-service {
+    &__container {
+      max-width: 100%;
+    }
+  }
+}
+
+// 모바일 (768px 이하)
+@media (max-width: 768px) {
+  .free-service {
+    padding: 40px 15px;
+
+    &__container {
+      max-width: 100%;
+    }
+
+    &__banner-text {
+      font-size: 1.1rem;
+    }
+
+    &__phone {
+      font-size: 1.5rem;
+    }
+
+    &__button {
+      padding: 12px 25px;
+      font-size: 1rem;
+      width: 100%;
+    }
+  }
+}
+

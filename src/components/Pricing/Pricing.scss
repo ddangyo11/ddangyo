@@ -1,0 +1,199 @@
+.pricing {
+  padding: 80px 20px;
+  background-color: #fff;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__banner {
+    width: 100%;
+    margin-bottom: 60px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    &-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__content {
+    width: 100%;
+  }
+
+  &__title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  &__subtitle {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #666;
+  }
+
+  &__table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    min-width: 600px;
+
+    thead {
+      background-color: #ff6b35;
+      color: #fff;
+    }
+
+    th {
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px solid #eee;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #fff5f0;
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+
+      td {
+        padding: 15px;
+        text-align: center;
+        color: #333;
+      }
+    }
+  }
+
+  &__commission {
+    margin-top: 50px;
+    padding: 40px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+
+    &-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    &-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    &-label {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    &-value {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #ff6b35;
+    }
+  }
+}
+
+// PC 스타일 (1024px 이상)
+@media (min-width: 1024px) {
+  .pricing {
+    &__container {
+      max-width: 1200px;
+    }
+
+    &__commission-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+  }
+}
+
+// 태블릿 (768px ~ 1023px)
+@media (min-width: 768px) and (max-width: 1023px) {
+  .pricing {
+    &__container {
+      max-width: 100%;
+    }
+
+    &__commission-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  }
+}
+
+// 모바일 (768px 이하)
+@media (max-width: 768px) {
+  .pricing {
+    padding: 60px 15px;
+
+    &__container {
+      max-width: 100%;
+    }
+
+    &__title {
+      font-size: 1.8rem;
+    }
+
+    &__subtitle {
+      font-size: 1rem;
+    }
+
+    &__commission {
+      padding: 30px 15px;
+
+      &-grid {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      &-item {
+        padding: 15px;
+        width: 100%;
+      }
+
+      &-value {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+

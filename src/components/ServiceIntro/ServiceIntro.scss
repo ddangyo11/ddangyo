@@ -1,0 +1,93 @@
+.service-intro {
+  padding: 80px 20px;
+  background-color: #f8f8f8;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #ff6b35;
+  }
+
+  &__grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &__icon {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff5f0;
+    border-radius: 50%;
+
+    &-img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+    }
+  }
+
+  &__item-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+    line-height: 1.4;
+  }
+
+  &__item-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+  }
+}
+
+// 반응형
+@media (max-width: 768px) {
+  .service-intro {
+    padding: 60px 20px;
+
+    &__title {
+      font-size: 1.8rem;
+      margin-bottom: 40px;
+    }
+
+    &__grid {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    &__item {
+      min-width: 100%;
+    }
+  }
+}
+
