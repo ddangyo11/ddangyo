@@ -22,38 +22,57 @@
   }
 
   &__item {
-    background-color: #fff;
     padding: 40px 20px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-
+    transition: background 0.8s ease, border 0.8s ease, transform 0.3s ease,
+      box-shadow 0.3s ease;
+    position: relative;
+    background: #fff;
+    border: 1px solid transparent;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 60px;
     &:hover {
       transform: translateY(-5px);
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
     }
+    &.active {
+      background: linear-gradient(180deg, #fff 33.33%, #fdf8f3 100%),
+        linear-gradient(to bottom, #ffa890 0%, #c3caf8 100%);
+      border: 1px solid #fb521c;
+    }
   }
 
   &__step-label {
-    display: inline-block;
     background-color: #ff6b35;
     color: #fff;
     padding: 8px 20px;
+    display: flex;
     border-radius: 20px;
-    font-size: 0.9rem;
+    line-height: 1;
+    font-size: 16px;
     font-weight: bold;
-    margin-bottom: 20px;
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
   }
 
   &__icon {
-    width: 100px;
-    height: 100px;
-    margin: 0 auto 20px;
+    width: 239px;
+    height: 191px;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    position: absolute;
+    left: 50%;
+    top: 42%;
+    transform: translate(-50%, -50%);
     &-img {
       width: 100%;
       height: 100%;
@@ -62,15 +81,14 @@
   }
 
   &__step-title {
-    font-size: 1.3rem;
+    font-size: 20px;
     font-weight: bold;
-    margin-bottom: 15px;
-    color: #333;
+    color: #fb521c;
     line-height: 1.4;
   }
 
   &__step-description {
-    font-size: 0.9rem;
+    font-size: 14px;
     color: #666;
     line-height: 1.6;
   }
@@ -135,4 +153,3 @@
     }
   }
 }
-

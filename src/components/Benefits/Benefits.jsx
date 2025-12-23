@@ -1,10 +1,17 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "./Benefits.scss";
-import character02 from "../../assets/images/character_02.png";
-import character04 from "../../assets/images/character_04.png";
 import doremi_01 from "../../assets/images/doremi_01.png";
 import doremi_02 from "../../assets/images/character_02.png";
+import icon01 from "../../assets/images/1.png";
+import icon02 from "../../assets/images/2.png";
+import icon03 from "../../assets/images/3.png";
+import icon04 from "../../assets/images/4.png";
+import icon05 from "../../assets/images/5.png";
+import icon06 from "../../assets/images/6.png";
+import icon07 from "../../assets/images/7.png";
+import icon08 from "../../assets/images/8.png";
+
 const Benefits = () => {
   useEffect(() => {
     AOS.init({
@@ -17,25 +24,25 @@ const Benefits = () => {
     {
       id: 1,
       title: "2% 이하 저렴한 배달 중개 수수료",
-      icon: character02,
+      icon: icon01,
       delay: 0,
     },
     {
       id: 2,
       title: "주문 당일 입금되는 번개 정산 시스템",
-      icon: character02,
+      icon: icon02,
       delay: 100,
     },
     {
       id: 3,
       title: "사장님 지원금 최대 30만원",
-      icon: character04,
+      icon: icon03,
       delay: 200,
     },
     {
       id: 4,
       title: "월 사용료, 광고비, 입점비 모두 무료",
-      icon: character04,
+      icon: icon04,
       delay: 300,
     },
   ];
@@ -44,25 +51,25 @@ const Benefits = () => {
     {
       id: 1,
       title: "지역 상품권/페이 사용시 7-18% 할인",
-      icon: character04,
+      icon: icon05,
       delay: 400,
     },
     {
       id: 2,
       title: "온누리 상품권 사용가능",
-      icon: character02,
+      icon: icon06,
       delay: 500,
     },
     {
       id: 3,
       title: "첫주문/재주문 할인쿠폰 지급",
-      icon: character04,
+      icon: icon07,
       delay: 600,
     },
     {
       id: 4,
       title: "땡겨요 포인트 적립",
-      icon: character02,
+      icon: icon08,
       delay: 700,
     },
   ];

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "./ConsultationButtons.scss";
 
-const ConsultationButtons = () => {
+const ConsultationButtons = ({ onOpenModal }) => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -14,18 +14,11 @@ const ConsultationButtons = () => {
     {
       id: 1,
       text: "신규 입점 상담",
+      onClick: onOpenModal,
     },
     {
       id: 2,
       text: "카카오톡 채팅 상담",
-    },
-    {
-      id: 3,
-      text: "전화 상담 010-7511-7151",
-    },
-    {
-      id: 4,
-      text: "문자 상담 010-7511-7151",
     },
   ];
 
@@ -38,6 +31,7 @@ const ConsultationButtons = () => {
             className="consultation-buttons__button"
             data-aos="fade-up"
             data-aos-delay={index * 100}
+            onClick={button.onClick}
           >
             <span>{button.text}</span>
           </button>

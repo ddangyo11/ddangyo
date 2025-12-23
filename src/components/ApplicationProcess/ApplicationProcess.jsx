@@ -1,17 +1,27 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "./ApplicationProcess.scss";
-import character01 from "../../assets/images/character_01.png";
-import character02 from "../../assets/images/character_02.png";
-import character03 from "../../assets/images/character_03.png";
-import character04 from "../../assets/images/character_04.png";
+import character01 from "../../assets/images/ic_05_market.png";
+import character02 from "../../assets/images/ic_02_custom.png";
+import character03 from "../../assets/images/ic_01_review.png";
+import character04 from "../../assets/images/device_03_con3.png";
 
 const ApplicationProcess = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
       once: true,
     });
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % 4);
+    }, 1500);
+
+    return () => clearInterval(interval);
   }, []);
 
   const steps = [
@@ -51,7 +61,9 @@ const ApplicationProcess = () => {
           {steps.map((step, index) => (
             <div
               key={step.id}
-              className="application-process__item"
+              className={`application-process__item ${
+                activeIndex === index ? "active" : ""
+              }`}
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
@@ -80,4 +92,3 @@ const ApplicationProcess = () => {
 };
 
 export default ApplicationProcess;
-

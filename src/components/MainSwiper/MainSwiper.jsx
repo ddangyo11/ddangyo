@@ -11,7 +11,7 @@ import device03 from "../../assets/images/device_04_con.png";
 import device04 from "../../assets/images/device_05_con1.png";
 import device05 from "../../assets/images/device_06_con1.png";
 
-const MainSwiper = () => {
+const MainSwiper = ({ onOpenModal }) => {
   return (
     <section className="main-swiper">
       <div className="main-swiper__header">
@@ -72,7 +72,9 @@ const MainSwiper = () => {
                 <p className="main-swiper__subtitle">
                   주문 건당 수수료 2%로 시작하는 착한 배달 서비스
                 </p>
-                <button className="main-swiper__button">신규 입점 상담</button>
+                <button className="main-swiper__button" onClick={onOpenModal}>
+                  신규 입점 상담
+                </button>
               </div>
             </div>
           </div>

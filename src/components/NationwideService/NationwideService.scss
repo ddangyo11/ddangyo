@@ -9,16 +9,18 @@
   }
 
   &__title {
-    font-size: 2.2rem;
-    font-weight: bold;
+    font-size: 46px;
     margin-bottom: 20px;
-    color: #333;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #fb521c;
   }
 
   &__subtitle {
-    font-size: 1.2rem;
+    font-size: 30px;
     color: #666;
     margin-bottom: 50px;
+    text-align: center;
     line-height: 1.6;
   }
 
@@ -26,7 +28,6 @@
     width: 100%;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 
     &-img {
       width: 100%;
