@@ -12,7 +12,7 @@ import device03 from "../../assets/images/device_04_con.png";
 import device04 from "../../assets/images/device_05_con1.png";
 import device05 from "../../assets/images/device_06_con1.png";
 
-const MainSwiper = ({ onOpenModal }) => {
+const MainSwiper = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -114,8 +114,8 @@ const MainSwiper = ({ onOpenModal }) => {
                   주문 건당 수수료 2%로 시작하는 착한 배달 서비스
                 </p>
                 <div className="main-swiper__cta-row">
-                  <button className="main-swiper__button" onClick={onOpenModal}>
-                    신규 입점 상담
+                  <button className="main-swiper__button">
+                    신규 입점 신청
                   </button>
                   <a
                     className="main-swiper__phone"
@@ -128,6 +128,9 @@ const MainSwiper = ({ onOpenModal }) => {
                     </span>
                   </a>
                 </div>
+                <p className="main-swiper__text2">
+                  입점 신청 후 담당자가 연락드릴 예정입니다. 가볍게 문의하세요!
+                </p>
               </div>
             </div>
           </div>

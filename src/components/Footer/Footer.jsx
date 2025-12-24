@@ -17,19 +17,15 @@ const Footer = () => {
             <p className="footer__text">ddangyo11@gmail.com</p>
           </div>
           <div className="footer__phone-block">
-            <p className="footer__phone-label">상담 문의</p>
+            <p className="footer__phone-label">신청 문의</p>
             <a
               className="footer__text footer__text--phone"
               href="tel:01075117151"
             >
               010-7511-7151
             </a>
-            <a
-              className="footer__cta-button"
-              href="sms:01075117151"
-              rel="noreferrer"
-            >
-              문자 상담 바로하기
+            <a className="footer__cta-button" href="#" rel="noreferrer">
+              신규 입점 신청
             </a>
           </div>
         </div>

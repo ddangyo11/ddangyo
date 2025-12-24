@@ -64,7 +64,7 @@ const ApplicationProcess = () => {
     {
       id: 1,
       title: "입점신청",
-      description: "휴대폰 010-7511-7151로 빠르게 문의하세요.",
+      description: " 010-7511-7151로 빠르게 문의하세요.",
       icon: character01,
     },
     {
@@ -88,9 +88,9 @@ const ApplicationProcess = () => {
   ];
 
   return (
-    <section className="application-process">
+    <section className="application-process" data-aos="fade-up">
       <div className="application-process__container">
-        <h2 className="application-process__title" data-aos="fade-up">
+        <h2 className="application-process__title">
           <p>땡겨요</p> 신청절차
         </h2>
         <div className="application-process__grid">
@@ -100,8 +100,6 @@ const ApplicationProcess = () => {
               className={`application-process__item ${
                 activeIndex === index ? "active" : ""
               }`}
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
             >
               <div className="application-process__step-label">
                 STEP {step.id}
@@ -126,7 +124,10 @@ const ApplicationProcess = () => {
             </div>
           ))}
         </div>
-        <div className="application-process__cta" data-aos="fade-up">
+        <div className="application-process__cta-text">
+          입점부터 설치까지 전부 <p>무료</p>
+        </div>
+        <div className="application-process__cta">
           <a
             className="application-process__cta-button"
             href={isMobile ? "tel:01075117151" : undefined}

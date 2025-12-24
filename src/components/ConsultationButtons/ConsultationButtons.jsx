@@ -1,16 +1,8 @@
 import { useEffect, useState } from "react";
-import AOS from "aos";
 import "./ConsultationButtons.scss";
 
-const ConsultationButtons = ({ onOpenModal }) => {
+const ConsultationButtons = () => {
   const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  }, []);
 
   useEffect(() => {
     const updateDevice = () => setIsMobile(window.innerWidth <= 768);
@@ -42,79 +34,105 @@ const ConsultationButtons = ({ onOpenModal }) => {
   const buttons = [
     {
       id: 1,
-      text: "신규 입점 상담",
-      onClick: onOpenModal,
+      text: "신규 입점 신청",
+      showMobile: false,
     },
     {
       id: 2,
       text: "카카오톡 채팅 상담",
       href: "#",
+      showMobile: false,
     },
     {
       id: 3,
       text: "전화 문의 010-7511-7151",
       href: isMobile ? "tel:01075117151" : undefined,
       onClick: isMobile ? undefined : copyPhoneNumber,
+      showMobile: false,
+      label: "전화 문의",
+      number: "010-7511-7151",
+    },
+    {
+      id: 4,
+      text: "문자 문의 010-7511-7151",
+      href: isMobile ? "sms:01075117151" : undefined,
+      showMobile: true,
+      label: "문자 문의",
+      number: "010-7511-7151",
     },
   ];
 
+  // 필터링: 데스크탑에서는 showMobile이 false인 것만, 모바일에서는 모든 버튼
+  const visibleButtons = buttons.filter(
+    (button) => !button.showMobile || isMobile
+  );
+
   return (
-    <section className="consultation-buttons">
+    <section className="consultation-buttons" data-aos="fade-up">
       <div className="consultation-buttons__container">
-        {buttons.map((button, index) => (
-          <div
-            key={button.id}
-            className={`consultation-buttons__item ${
-              button.id === 3 ? "consultation-buttons__item--full-width" : ""
-            }`}
-            data-aos="fade-up"
-            data-aos-delay={index * 100}
-          >
-            {button.href ? (
-              <a
-                className={`consultation-buttons__button consultation-buttons__button--link ${
-                  button.id === 3 ? "consultation-buttons__button--phone" : ""
-                }`}
-                href={button.href}
-                target={button.href?.startsWith("http") ? "_blank" : undefined}
-                rel="noreferrer"
-              >
-                {button.id === 3 ? (
-                  <>
-                    <span className="consultation-buttons__phone-label">
-                      전화 문의
-                    </span>{" "}
-                    <span className="consultation-buttons__phone-number">
-                      010-7511-7151
-                    </span>
-                  </>
-                ) : (
-                  <span>{button.text}</span>
-                )}
-              </a>
-            ) : (
-              <button
-                className={`consultation-buttons__button ${
-                  button.id === 3 ? "consultation-buttons__button--phone" : ""
-                }`}
-                onClick={button.onClick}
-              >
-                {button.id === 3 ? (
-                  <>
-                    <span className="consultation-buttons__phone-label">
-                      전화 문의
-                    </span>{" "}
-                    <span className="consultation-buttons__phone-number">
-                      010-7511-7151
-                    </span>
-                  </>
-                ) : (
-                  <span>{button.text}</span>
-                )}
-              </button>
-            )}
-          </div>
-        ))}
+        {visibleButtons.map((button) => {
+          const isPhoneButton = button.id === 3 || button.id === 4;
+          const isMobilePhoneButton = isMobile && isPhoneButton;
+
+          return (
+            <div
+              key={button.id}
+              className={`consultation-buttons__item ${
+                isMobilePhoneButton
+                  ? "consultation-buttons__item--mobile-phone"
+                  : button.id === 3 && !isMobile
+                  ? "consultation-buttons__item--full-width"
+                  : ""
+              }`}
+            >
+              {button.href ? (
+                <a
+                  className={`consultation-buttons__button consultation-buttons__button--link ${
+                    isPhoneButton ? "consultation-buttons__button--phone" : ""
+                  }`}
+                  href={button.href}
+                  target={
+                    button.href?.startsWith("http") ? "_blank" : undefined
+                  }
+                  rel="noreferrer"
+                >
+                  {isPhoneButton && button.label ? (
+                    <>
+                      <span className="consultation-buttons__phone-label">
+                        {button.label}
+                      </span>{" "}
+                      <span className="consultation-buttons__phone-number">
+                        {button.number}
+                      </span>
+                    </>
+                  ) : (
+                    <span>{button.text}</span>
+                  )}
+                </a>
+              ) : (
+                <button
+                  className={`consultation-buttons__button ${
+                    isPhoneButton ? "consultation-buttons__button--phone" : ""
+                  }`}
+                  onClick={button.onClick}
+                >
+                  {isPhoneButton && button.label ? (
+                    <>
+                      <span className="consultation-buttons__phone-label">
+                        {button.label}
+                      </span>{" "}
+                      <span className="consultation-buttons__phone-number">
+                        {button.number}
+                      </span>
+                    </>
+                  ) : (
+                    <span>{button.text}</span>
+                  )}
+                </button>
+              )}
+            </div>
+          );
+        })}
       </div>
     </section>
   );

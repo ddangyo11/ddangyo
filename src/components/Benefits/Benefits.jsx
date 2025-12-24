@@ -111,9 +111,9 @@ const Benefits = () => {
   ];
 
   return (
-    <section className="benefits">
+    <section className="benefits" data-aos="fade-up">
       <div className="benefits__container">
-        <h2 className="benefits__title" data-aos="fade-up">
+        <h2 className="benefits__title">
           왜 '땡겨요'가{" "}
           <span className="benefits__title-highlight">착한배달앱</span>일까요?
         </h2>
@@ -124,17 +124,10 @@ const Benefits = () => {
         />
         <div className="benefits__sections-wrapper">
           <div className="benefits__section">
-            <h3 className="benefits__section-title" data-aos="fade-up">
-              가맹점 혜택
-            </h3>
+            <h3 className="benefits__section-title">가맹점 혜택</h3>
             <div className="benefits__list">
               {merchantBenefits.map((benefit) => (
-                <div
-                  key={benefit.id}
-                  className="benefits__item"
-                  data-aos="fade-up"
-                  data-aos-delay={benefit.delay}
-                >
+                <div key={benefit.id} className="benefits__item">
                   <div className="benefits__icon">
                     <img
                       className="benefits__icon-img"
@@ -149,17 +142,10 @@ const Benefits = () => {
           </div>
 
           <div className="benefits__section">
-            <h3 className="benefits__section-title" data-aos="fade-up">
-              소비자 혜택
-            </h3>
+            <h3 className="benefits__section-title">소비자 혜택</h3>
             <div className="benefits__list">
               {consumerBenefits.map((benefit) => (
-                <div
-                  key={benefit.id}
-                  className="benefits__item"
-                  data-aos="fade-up"
-                  data-aos-delay={benefit.delay}
-                >
+                <div key={benefit.id} className="benefits__item">
                   <div className="benefits__icon">
                     <img
                       className="benefits__icon-img"
@@ -173,7 +159,7 @@ const Benefits = () => {
             </div>
           </div>
         </div>
-        <div className="benefits__cta" data-aos="fade-up" data-aos-delay="100">
+        <div className="benefits__cta">
           <a
             className="benefits__cta-button benefits__cta-button--phone"
             href={isMobile ? "tel:01075117151" : undefined}

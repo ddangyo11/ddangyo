@@ -1,0 +1,231 @@
+.service-info {
+  background-image: url(../../assets/images/device_08_pic.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  object-fit: cover;
+  image-rendering: -webkit-optimize-contrast;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  // Required Documents Section
+  &__documents-section {
+    margin-bottom: 40px;
+  }
+
+  &__documents-box {
+    border-radius: 8px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-direction: column-reverse;
+  }
+
+  &__documents-left {
+    border-radius: 8px;
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    h2 {
+      font-size: 32px;
+      font-weight: bold;
+      color: white;
+    }
+  }
+
+  &__documents-icon {
+    width: 133px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__documents-list {
+    display: flex;
+    gap: 40px;
+  }
+
+  &__documents-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  &__documents-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__documents-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__documents-check {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffd700;
+    color: #333;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+
+  &__documents-text {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 500;
+  }
+
+  // Free Service Section
+  &__free-section {
+    text-align: center;
+  }
+
+  &__banner {
+    background-color: #666;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  &__banner-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+
+    &--highlight {
+      color: #ff6b35;
+      font-size: 46px;
+    }
+  }
+
+  &__description {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__contact-label {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0066cc;
+  }
+
+  &__contact-phone {
+    font-size: 32px;
+    font-weight: bold;
+    color: #0066cc;
+    text-decoration: none;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+// PC 스타일 (1024px 이상)
+@media (min-width: 1024px) {
+  .service-info {
+    &__container {
+      max-width: 1200px;
+    }
+  }
+}
+
+// 태블릿 (768px ~ 1023px)
+@media (min-width: 768px) and (max-width: 1023px) {
+  .service-info {
+    &__container {
+      max-width: 100%;
+    }
+  }
+}
+
+// 모바일 (768px 이하)
+@media (max-width: 768px) {
+  .service-info {
+    padding: 40px 15px;
+
+    &__container {
+      max-width: 100%;
+    }
+
+    &__documents-box {
+      flex-direction: column;
+      padding: 25px 20px;
+      gap: 25px;
+    }
+
+    &__documents-left {
+      width: 100%;
+      min-width: auto;
+      padding: 25px 15px;
+    }
+
+    &__documents-right {
+      width: 100%;
+    }
+
+    &__banner {
+      padding: 20px 15px;
+    }
+
+    &__banner-text {
+      font-size: 20px;
+    }
+
+    &__description {
+      font-size: 14px;
+    }
+
+    &__contact-label {
+      font-size: 18px;
+    }
+
+    &__contact-phone {
+      font-size: 24px;
+    }
+  }
+}

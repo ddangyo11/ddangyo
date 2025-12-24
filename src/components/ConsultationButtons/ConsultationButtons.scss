@@ -72,7 +72,7 @@
 }
 
 // PC 스타일 (1024px 이상)
-@media (min-width: 1024px) {
+@media (min-width: 769px) {
   .consultation-buttons {
     &__container {
       max-width: 1200px;
@@ -86,17 +86,6 @@
   }
 }
 
-// 태블릿 (768px ~ 1023px)
-@media (min-width: 768px) and (max-width: 1023px) {
-  .consultation-buttons {
-    &__container {
-      max-width: 100%;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 15px;
-    }
-  }
-}
-
 // 모바일 (768px 이하)
 @media (max-width: 768px) {
   .consultation-buttons {
@@ -105,13 +94,27 @@
     &__container {
       max-width: 100%;
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 15px;
+    }
+
+    &__item {
+      flex: 0 0 100%;
     }
 
     &__button {
       padding: 16px;
       font-size: 16px;
       width: 100%;
+    }
+
+    &__phone-label {
+      font-size: 16px;
+    }
+
+    &__phone-number {
+      font-size: 16px;
     }
   }
 }

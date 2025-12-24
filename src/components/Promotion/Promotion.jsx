@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
-import AOS from 'aos';
-import './Promotion.scss';
-import character01 from '../../assets/images/character_01.png';
+import { useEffect } from "react";
+import AOS from "aos";
+import "./Promotion.scss";
+import character01 from "../../assets/images/character_01.png";
 
 const Promotion = () => {
   useEffect(() => {
@@ -12,17 +12,17 @@ const Promotion = () => {
   }, []);
 
   return (
-    <section className="promotion">
+    <section className="promotion" data-aos="fade-up">
       <div className="promotion__container">
-        <div className="promotion__banner" data-aos="fade-up">
-          <img 
-            className="promotion__banner-img" 
-            alt="포장 주문 0원 프로모션 배너" 
+        <div className="promotion__banner">
+          <img
+            className="promotion__banner-img"
+            alt="포장 주문 0원 프로모션 배너"
             src={character01}
           />
         </div>
-        
-        <div className="promotion__content" data-aos="fade-up" data-aos-delay="200">
+
+        <div className="promotion__content">
           <h2 className="promotion__title">포장 주문 0원 프로모션</h2>
           <p className="promotion__description">
             배달비 없이 편리한 땡겨요 포장 주문 서비스
@@ -37,4 +37,3 @@ const Promotion = () => {
 };
 
 export default Promotion;
-

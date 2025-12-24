@@ -53,7 +53,38 @@
       border: 1px solid #fb521c;
     }
   }
-
+  &__cta-text {
+    width: 100%;
+    display: inline-flex;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 33px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 800;
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease,
+      background-color 0.2s ease;
+    background: rgba(255, 107, 53, 0.08);
+    border: 1px solid rgba(255, 107, 53, 0.3);
+    border-radius: 8px;
+    color: black;
+    font-size: 24px;
+    gap: 20px;
+    line-height: 20px;
+    height: 66px;
+    p {
+      font-size: 30px;
+      font-weight: bold;
+      color: #ff6b35;
+    }
+    &:hover {
+      background: rgba(255, 107, 53, 0.12);
+      transform: translateY(-2px);
+    }
+  }
   &__step-label {
     background-color: #ff6b35;
     color: #fff;
@@ -110,7 +141,7 @@
   }
 
   &__cta {
-    margin-top: 40px;
+    margin-top: 20px;
     display: flex;
     gap: 12px;
     flex-wrap: wrap;

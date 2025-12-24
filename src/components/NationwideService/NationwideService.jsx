@@ -47,37 +47,25 @@ const NationwideService = () => {
   };
 
   return (
-    <section className="nationwide-service">
+    <section className="nationwide-service" data-aos="fade-up">
       <div className="nationwide-service__container">
-        <h2 className="nationwide-service__title" data-aos="fade-up">
+        <h2 className="nationwide-service__title">
           <span className="nationwide-service__title-highlight">땡겨요</span>
           <span className="nationwide-service__title-normal">
             를 전국에서 만나요!
           </span>
         </h2>
-        <p
-          className="nationwide-service__subtitle"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
+        <p className="nationwide-service__subtitle">
           이제는 언제 어디서든, 맛있는 음식을 땡겨요로 주문하세요
         </p>
-        <div
-          className="nationwide-service__map"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
+        <div className="nationwide-service__map">
           <img
             className="nationwide-service__map-img"
             alt="전국 서비스 지도 이미지"
             src={map}
           />
         </div>
-        <div
-          className="nationwide-service__cta"
-          data-aos="fade-up"
-          data-aos-delay="300"
-        >
+        <div className="nationwide-service__cta">
           <a
             className="nationwide-service__cta-button nationwide-service__cta-button--phone"
             href={isMobile ? "tel:01075117151" : undefined}

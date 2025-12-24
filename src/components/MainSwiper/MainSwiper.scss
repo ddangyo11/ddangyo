@@ -40,7 +40,13 @@
       background-size: contain;
     }
   }
-
+  &__text2 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #9d9d9d;
+    line-height: 1.4;
+    margin-top: 20px;
+  }
   &__header-character {
     width: 70px;
     height: 70px;
