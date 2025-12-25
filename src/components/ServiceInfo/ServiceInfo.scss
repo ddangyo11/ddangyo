@@ -1,5 +1,6 @@
 .service-info {
-  background-image: url(../../assets/images/device_08_pic.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url(../../assets/images/device_08_pic.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -58,6 +59,8 @@
   &__documents-list {
     display: flex;
     gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   &__documents-label {
@@ -177,8 +180,46 @@
 // 태블릿 (768px ~ 1023px)
 @media (min-width: 768px) and (max-width: 1023px) {
   .service-info {
+    padding: 60px 20px;
+    height: auto;
+    min-height: 100vh;
+
     &__container {
       max-width: 100%;
+    }
+
+    &__documents-box {
+      padding: 25px 20px;
+    }
+
+    &__documents-left {
+      h2 {
+        font-size: 28px;
+      }
+    }
+
+    &__documents-list {
+      gap: 30px;
+    }
+
+    &__banner-text {
+      font-size: 22px;
+
+      &--highlight {
+        font-size: 38px;
+      }
+    }
+
+    &__description {
+      font-size: 18px;
+    }
+
+    &__contact-label {
+      font-size: 20px;
+    }
+
+    &__contact-phone {
+      font-size: 28px;
     }
   }
 }
@@ -192,32 +233,78 @@
       max-width: 100%;
     }
 
+    height: auto;
+    min-height: 100vh;
+    padding: 40px 15px;
+
+    &__container {
+      padding: 0;
+    }
+
+    &__documents-section {
+      margin-bottom: 30px;
+    }
+
     &__documents-box {
-      flex-direction: column;
-      padding: 25px 20px;
-      gap: 25px;
+      padding: 20px 15px;
+      gap: 20px;
     }
 
     &__documents-left {
       width: 100%;
       min-width: auto;
-      padding: 25px 15px;
+      padding: 20px 15px;
+      gap: 15px;
+
+      h2 {
+        font-size: 24px;
+      }
     }
 
     &__documents-right {
       width: 100%;
+      align-items: center;
+    }
+
+    &__documents-icon {
+      width: 100px;
+    }
+
+    &__documents-list {
+      flex-direction: column;
+      gap: 15px;
+      align-items: flex-start;
+    }
+
+    &__documents-item {
+      width: 100%;
+    }
+
+    &__documents-text {
+      font-size: 16px;
     }
 
     &__banner {
-      padding: 20px 15px;
+      padding: 15px 12px;
+      gap: 8px;
     }
 
     &__banner-text {
-      font-size: 20px;
+      font-size: 18px;
+
+      &--highlight {
+        font-size: 32px;
+      }
     }
 
     &__description {
       font-size: 14px;
+      padding: 0 10px;
+      line-height: 1.5;
+    }
+
+    &__contact {
+      gap: 8px;
     }
 
     &__contact-label {
@@ -225,7 +312,7 @@
     }
 
     &__contact-phone {
-      font-size: 24px;
+      font-size: 22px;
     }
   }
 }

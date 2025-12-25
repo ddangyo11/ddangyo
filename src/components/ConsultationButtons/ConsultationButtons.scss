@@ -72,7 +72,7 @@
 }
 
 // PC 스타일 (1024px 이상)
-@media (min-width: 769px) {
+@media (min-width: 1025px) {
   .consultation-buttons {
     &__container {
       max-width: 1200px;
@@ -87,8 +87,9 @@
 }
 
 // 모바일 (768px 이하)
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .consultation-buttons {
+    display: none !important;
     padding: 30px 15px;
 
     &__container {

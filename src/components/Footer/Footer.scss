@@ -112,7 +112,8 @@
 @media (max-width: 768px) {
   .footer {
     padding: 40px 15px 20px;
-
+    padding-left: 0;
+    padding-right: 0;
     &__container {
       max-width: 100%;
     }
@@ -122,12 +123,41 @@
       gap: 30px;
     }
 
+    &__logo-img {
+      width: 120px;
+    }
+
     &__text {
-      font-size: 0.9rem;
+      font-size: 15px;
+      line-height: 1.4;
 
       &--phone {
-        font-size: 1.3rem;
+        font-size: 20px;
       }
+    }
+
+    &__phone-label {
+      font-size: 14px;
+    }
+
+    &__cta-button {
+      width: 100%;
+      padding: 10px 14px;
+      font-size: 15px;
+    }
+
+    &__copyright {
+      padding-top: 20px;
+
+      p {
+        font-size: 12px;
+      }
+    }
+    &__info {
+      align-items: center;
+    }
+    &__phone-block {
+      align-items: center;
     }
   }
 }

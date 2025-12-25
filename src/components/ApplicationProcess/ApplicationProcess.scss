@@ -129,7 +129,7 @@
   }
 
   &__step-description {
-    font-size: 18px;
+    font-size: 17px;
     color: #444;
     line-height: 1.6;
     font-weight: 600;
@@ -199,14 +199,38 @@
 // 태블릿 (768px ~ 1023px)
 @media (min-width: 768px) and (max-width: 1023px) {
   .application-process {
+    padding: 70px 20px;
+
     &__container {
       max-width: 100%;
+    }
+
+    &__title {
+      font-size: 32px;
     }
 
     &__grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 25px;
+    }
+
+    &__item {
+      height: 380px;
+    }
+
+    &__icon {
+      width: 200px;
+      height: 160px;
+    }
+
+    &__cta-button {
+      padding: 16px 24px;
+      font-size: 20px;
+
+      span {
+        font-size: 20px;
+      }
     }
   }
 }
@@ -221,7 +245,7 @@
     }
 
     &__title {
-      font-size: 1.8rem;
+      font-size: 29px;
       margin-bottom: 40px;
     }
 
@@ -233,20 +257,48 @@
     &__item {
       padding: 30px 15px;
       width: 100%;
+      height: auto;
+      min-height: 300px;
+      padding-bottom: 66px;
     }
 
     &__step-title {
-      font-size: 1.1rem;
+      font-size: 18px;
+    }
+
+    &__step-description {
+      font-size: 17px;
+    }
+
+    &__icon {
+      width: 180px;
+      height: 144px;
     }
 
     &__cta {
       flex-direction: column;
       align-items: stretch;
+      gap: 10px;
+      margin-top: 30px;
     }
 
     &__cta-button {
       width: 100%;
       text-align: center;
+      padding: 16px 20px;
+      font-size: 18px;
+
+      span {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .application-process {
+    &__step-description {
+      font-size: 13px;
     }
   }
 }

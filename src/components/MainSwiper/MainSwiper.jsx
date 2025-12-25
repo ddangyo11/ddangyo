@@ -51,10 +51,17 @@ const MainSwiper = () => {
   return (
     <section className="main-swiper">
       <div className="main-swiper__header">
-        <div className="main-swiper__header-left">
-          <h1 className="main-swiper__header-logo">
-            <img src={logo01} alt="땡겨요 로고" />
-          </h1>
+        <div className="main-swiper__header-container">
+          <div className="main-swiper__header-left">
+            <h1 className="main-swiper__header-logo">
+              <img src={logo01} alt="땡겨요 로고" />
+            </h1>
+          </div>
+          <div className="main-swiper__header-right">
+            <a className="main-swiper__header-button" href="#">
+              신규 입점 신청
+            </a>
+          </div>
         </div>
       </div>
       <Swiper

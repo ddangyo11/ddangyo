@@ -122,8 +122,35 @@
 // 태블릿 (768px ~ 1023px)
 @media (min-width: 768px) and (max-width: 1023px) {
   .nationwide-service {
+    padding: 70px 20px;
+
     &__container {
       max-width: 100%;
+    }
+
+    &__title {
+      font-size: 38px;
+    }
+
+    &__subtitle {
+      font-size: 24px;
+    }
+
+    &__cta {
+      gap: 12px;
+    }
+
+    &__cta-button {
+      padding: 16px 24px;
+      font-size: 20px;
+    }
+
+    &__phone-label {
+      font-size: 20px;
+    }
+
+    &__phone-number {
+      font-size: 20px;
     }
   }
 }
@@ -138,21 +165,44 @@
     }
 
     &__title {
-      font-size: 1.8rem;
+      font-size: 29px;
+      line-height: 1.3;
+    }
+
+    &__title-highlight {
+      font-size: 29px;
+    }
+
+    &__title-normal {
+      font-size: 29px;
     }
 
     &__subtitle {
-      font-size: 1rem;
+      font-size: 15px;
+      line-height: 1.5;
+      padding: 0 10px;
     }
 
     &__cta {
       flex-direction: column;
       align-items: stretch;
+      gap: 10px;
+      margin-top: 25px;
     }
 
     &__cta-button {
       width: 100%;
       text-align: center;
+      padding: 16px 20px;
+      font-size: 18px;
+    }
+
+    &__phone-label {
+      font-size: 18px;
+    }
+
+    &__phone-number {
+      font-size: 18px;
     }
   }
 }
