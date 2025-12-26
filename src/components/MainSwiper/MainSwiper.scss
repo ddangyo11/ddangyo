@@ -62,7 +62,7 @@
   &__text2 {
     font-size: 18px;
     font-weight: 400;
-    color: #9d9d9d;
+    color: white;
     line-height: 1.4;
     margin-top: 20px;
   }
@@ -114,7 +114,8 @@
   }
 
   &__slide-1 {
-    background-image: url(../../assets/images/pattern.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+      url(/src/assets/images/pattern.png?t=1766708796502);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -226,13 +227,14 @@
   }
 
   &__title-strong {
-    color: #111;
+    color: white;
   }
 
   &__subtitle {
     font-size: 26px;
     margin-bottom: 40px;
     line-height: 1;
+    color: white;
   }
 
   &__button {
@@ -278,7 +280,7 @@
   &__phone-number {
     font-size: 20px;
     font-weight: 800;
-    color: #111;
+    color: white;
     text-decoration: none;
   }
 }
