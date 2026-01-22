@@ -13,7 +13,6 @@ const Footer = () => {
             <p className="footer__text">
               땡겨요 공식협력사 (전 지역 가입 가능)
             </p>
-            <p className="footer__text">최은정</p>
             <p className="footer__text">ddangyo11@gmail.com</p>
           </div>
           <div className="footer__phone-block">
